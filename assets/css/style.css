@@ -1,18 +1,42 @@
 :root {
     --primary-color:rgb(49, 49, 92);
+    --secondary-color:rgb(191, 223, 13);
+    --thrid-color:rgb(0, 255, 102); 
+
 }
 
+/* Captions on each thumbnail */
 
-
-.header {
+/* Border and Section Titles */
+.border {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: rgb(49, 49, 92);
     display: flex;
     justify-content: space-between;
-    position: sticky;
-    overflow: hidden;
+
 }
+
+.caption {
+    position:absolute;
+    padding: 5px;
+    bottom: 16px;
+    left: 1px;
+    text-align: left;
+    font-size: 12px;
+    color: white;
+    background-color: lightblue;
+}
+
+
+.my-picture{
+    margin:15px;
+    position: relative;
+
+}
+
+
+
 header h1 {
         color:white;
         margin: 5px 10px 5px 30px;
@@ -20,12 +44,13 @@ header h1 {
     
 }
 header nav{
+        justify-content: flex-end;
         padding-top: 20px;
         margin-right:20px; 
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-size: 24px;
         display: flex;
-        justify-content: flex-end;
+        
 }
 header nav ul li {
     display:inline-block;
@@ -38,25 +63,30 @@ header nav ul li a{
 }
 
 p{
+    justify-content:space-evenly;
     align-items: center;
     width: 50%;
     font-size:24px;
     padding:5px 35px 0 20px;
-    justify-content:space-evenly;
+    
 }
+
 section{
     display: flex;
     margin: 10px;
     padding: 20px;
     width: 100%;
 }
-.section-detail{
+
+.details{
     padding-bottom: 50px;
     width: 100%;
     display: flex;
     margin: 20px auto;
 }
-.section-title{
+
+
+.title{
     display: inline-block;
     border-right: 5px solid;
     margin-right: 35px;
@@ -66,35 +96,113 @@ section{
     flex-basis: 25%;
     padding: 30px;
 }
+
 .primary-border{
     border-color: var(--primary-color);
 }
-.work-container{
+
+.thumbnail-display{
     flex-wrap:wrap;
-    display:flex;
+    display:flex; 
     flex: 0 0 66%;
 }
-.item-detail{
+
+.thumbnail-detail{
     position: relative;
     margin: 12px;
     width: fit-content;
 }
-.item-detail:hover {
+
+/* Color of Thumbnail Margin when you hover the mouse */
+.thumbnail-detail:hover {
     background-color: var(--primary-color);
 }
+
 img {
     border: 5px solid green;
     size: 10px 10px 10px;
 }
-.bottom-left {
-    position:absolute;
-    padding: 5px;
-    bottom: 16px;
-    left: 1px;
-    text-align: left;
-    font-size: 12px;
-    color: white;
-    background-color: lightblue;
+
+
+@media screen and (max-width: 980px) {
+    
+    p {
+        flex: 2 100%;
+        text-align: left;
+        justify-content: left;
+    header {
+      padding-bottom: 0;
+      justify-content: center;
+      position: relative;
+      flex-direction: column;
+      text-align: center;
+    }
+    header h1 {
+      width: 100%;
+      text-align: center;
+      margin: 5px
+    }
+    header nav ul {
+      margin-top: 20px;
+      width: 100%;
+      justify-content: center;
+    }
+    header nav ul li a {
+      font-size: 20px;
+    }
+  
+    }
 }
+@media screen and (max-width: 768px) {
+    
+    
+    
+    .thumbnail-detail img {
+        flex: 0 32%;
+        margin-right: 0;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 90%;
+    }
+   
+    a {
+        flex-direction: column;
+        justify-content: center;
+        display: contents;
+        padding: 10px;
+    }
+    section {
+      padding: 30px 15px;
+      text-align: center;
+    }
+    .details {
+        flex-direction: column;
+    }
+    .title {
+        font-size: 48px;
+        text-align: center;
+        flex-direction: column;
+        border-bottom: 5px solid;
+        border-right: none;
+        padding: 15px;
+        margin: 0;
+    }
+    p {
+        flex-direction: column;
+        justify-content: center;
+        display: contents;
+        padding: 10px
+    }
+    .my-picture {
+        justify-content: center;
+    }
+    .thumbnail-detail {
+      flex: 2 100%;
+      text-align: left;
+      justify-content: left;
+      display: flex;
+    }
+  
 
-
+    
+    
