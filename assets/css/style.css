@@ -5,7 +5,7 @@
 
 }
 
-/* Captions on each thumbnail */
+
 
 /* Border and Section Titles */
 .border {
@@ -30,7 +30,7 @@
 
 
 .my-picture{
-    margin:15px;
+    margin:25px;
     position: relative;
 
 }
@@ -204,5 +204,3 @@ img {
     }
   
 
-    
-    
